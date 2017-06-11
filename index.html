@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GPA Calculator</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="mediaquery.css" />
+		<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet" />
+		<script type="text/javascript" src="calculator.js"></script>
+	</head>
+	<body onLoad="launch()">
+		<div class="about" align="center">
+			<h4>De La Salle University</h4>
+			<h1>GPA Calculator</h1>
+			<span>created by mjarenyap</span>
+			<div class="description" id="desc">
+				See how well you did this term by computing for your grade point average!
+				Type your course names, units and grades. Click "compute" and you're done!
+			</div>
+			<div class="social-container">
+				<div class="social">
+					<a href="https://twitter.com/mjarenyap">
+						<img src="images/twitter-icon.svg" />
+						<div>Twitter</div>
+					</a>
+				</div>
+				<div class="social">
+					<a href="https://www.linkedin.com/in/mjarenyap/">
+						<img src="images/linkedin-icon.svg" />
+						<div>LinkedIn</div>
+					</a>
+				</div>
+				<div class="social">
+					<a href="https://medium.com/@mjaren.yap">
+						<img src="images/medium-icon.svg" />
+						<div>Medium</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="main-control">
+			<header>
+				<div>
+					Number of Courses: 
+					<span id="currNum"></span>
+				</div>
+				<input type="button" value="-" class="btn" id="minus" onClick="decrease()" />
+				<input type="button" value="+" class="btn" id="plus" onClick="increase()" />
+			</header>
+
+			<div class="data-headers">
+				<div id="title-header">Course Title (Optional)</div>
+				<div id="digit-header">Units</div>
+				<div id="digit-header">Grade</div>
+			</div>
+
+			<section class="fields">
+				<div id="msg">Click the "+" button.</div>
+				<div id="line0">
+					<input type="text" class="title" id="title0" value="Course 1" />
+					<input type="text" class="digits" id="unit0" value="3" />
+					<input type="text" class="digits" id="grade0" value="0.0" />
+				</div>
+				<div id="line1">
+					<input type="text" class="title" id="title1" value="Course 2" />
+					<input type="text" class="digits" id="unit1" value="3" />
+					<input type="text" class="digits" id="grade1" value="0.0" />
+				</div>
+				<div id="line2">
+					<input type="text" class="title" id="title2" value="Course 3" />
+					<input type="text" class="digits" id="unit2" value="3" />
+					<input type="text" class="digits" id="grade2" value="0.0" />
+				</div>
+				<div id="line3">
+					<input type="text" class="title" id="title3" value="Course 4" />
+					<input type="text" class="digits" id="unit3" value="3" />
+					<input type="text" class="digits" id="grade3" value="0.0" />
+				</div>
+				<div id="line4">
+					<input type="text" class="title" id="title4" value="Course 5" />
+					<input type="text" class="digits" id="unit4" value="3" />
+					<input type="text" class="digits" id="grade4" value="0.0" />
+				</div>
+				<div id="line5">
+					<input type="text" class="title" id="title5" value="Course 6" />
+					<input type="text" class="digits" id="unit5" value="3" />
+					<input type="text" class="digits" id="grade5" value="0.0" />
+				</div>
+				<div id="line6">
+					<input type="text" class="title" id="title6" value="Course 7" />
+					<input type="text" class="digits" id="unit6" value="3" />
+					<input type="text" class="digits" id="grade6" value="0.0" />
+				</div>
+				<div id="line7">
+					<input type="text" class="title" id="title7" value="Course 8" />
+					<input type="text" class="digits" id="unit7" value="3" />
+					<input type="text" class="digits" id="grade7" value="0.0" />
+				</div>
+				<div id="line8">
+					<input type="text" class="title" id="title8" value="Course 9" />
+					<input type="text" class="digits" id="unit8" value="3" />
+					<input type="text" class="digits" id="grade8" value="0.0" />
+				</div>
+				<div id="line9">
+					<input type="text" class="title" id="title9" value="Course 10" />
+					<input type="text" class="digits" id="unit9" value="3" />
+					<input type="text" class="digits" id="grade9" value="0.0" />
+				</div>
+				<div id="line10">
+					<input type="text" class="title" id="title10" value="Course 11" />
+					<input type="text" class="digits" id="unit10" value="3" />
+					<input type="text" class="digits" id="grade10" value="0.0" />
+				</div>
+				<div id="line11">
+					<input type="text" class="title" id="title11" value="Course 12" />
+					<input type="text" class="digits" id="unit11" value="3" />
+					<input type="text" class="digits" id="grade11" value="0.0" />
+				</div>
+				<div id="line12">
+					<input type="text" class="title" id="title12" value="Course 13" />
+					<input type="text" class="digits" id="unit12" value="3" />
+					<input type="text" class="digits" id="grade12" value="0.0" />
+				</div>
+				<div id="line13">
+					<input type="text" class="title" id="title13" value="Course 14" />
+					<input type="text" class="digits" id="unit13" value="3" />
+					<input type="text" class="digits" id="grade13" value="0.0" />
+				</div>
+				<div id="line14">
+					<input type="text" class="title" id="title14" value="Course 15" />
+					<input type="text" class="digits" id="unit14" value="3" />
+					<input type="text" class="digits" id="grade14" value="0.0" />
+				</div>
+			</section>
+
+			<footer>
+				<div>
+					GPA: 
+					<span id="gpa"></span>
+				</div>
+				<input type="button" value="Compute" class="btn" id="compute" onClick="computeFinalGPA()" />
+			</footer>
+		</div>
+	<body>
+</html>
